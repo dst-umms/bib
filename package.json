@@ -4,7 +4,7 @@
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
-    "start": "ng serve",
+    "start": "concurrently \"./server/node_modules/nodemon/bin/nodemon.js ./server/server.js\" \"ng serve --port 8000 --proxy-config proxy.conf.json\"",
     "lint": "tslint \"src/**/*.ts\"",
     "test": "ng test",
     "pree2e": "webdriver-manager update",
@@ -27,7 +27,8 @@
     "core-js": "^2.4.1",
     "rxjs": "5.0.0-beta.12",
     "ts-helpers": "^1.1.1",
-    "zone.js": "^0.6.23"
+    "zone.js": "^0.6.23",
+    "concurrently": "^3.1.0"
   },
   "devDependencies": {
     "@types/jasmine": "^2.2.30",
