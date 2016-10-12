@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TreeModule } from 'angular2-tree-component';
+import { TreeService } from './tree.service';
 
 @Component({
   selector: 'app-tree',
@@ -8,34 +9,12 @@ import { TreeModule } from 'angular2-tree-component';
 })
 export class TreeComponent implements OnInit {
 
-  constructor() { }
+  nodes: any;
+  options = { idField: 'name' };
+  constructor(private treeService: TreeService) { }
 
   ngOnInit() {
+    this.treeService.getTreeRoot().then(nodes => this.nodes = nodes);
   }
-
-  nodes = [
-    {
-      id: 1,
-      name: 'root1',
-      children: [
-        { id: 2, name: 'child1' },
-        { id: 3, name: 'child2' }
-      ]
-    },
-    {
-      id: 4,
-      name: 'root2',
-      children: [
-        { id: 5, name: 'child2.1' },
-        {
-          id: 6,
-          name: 'child2.2',
-          children: [
-            { id: 7, name: 'subsub' }
-          ]
-        }
-      ]
-    }
-  ];
 
 }

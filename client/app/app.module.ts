@@ -6,6 +6,7 @@ import { TreeModule } from 'angular2-tree-component';
 
 import { AppComponent } from './app.component';
 import { TreeComponent } from './tree/tree.component';
+import { TreeService } from './tree/tree.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { TreeComponent } from './tree/tree.component';
     HttpModule,
     TreeModule
   ],
-  providers: [],
+  providers: [TreeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

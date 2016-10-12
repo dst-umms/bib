@@ -1,5 +1,9 @@
 {  
-  "/server": {
+  "/express": {
+    "target": "http://localhost:7998",
+    "secure": false
+  }, 
+  "/flask": {
     "target": "http://localhost:7999",
     "secure": false
   }
