@@ -4,7 +4,6 @@
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
-    "start": "concurrently \"./server/node_modules/nodemon/bin/nodemon.js ./server/server.js\" \"ng serve --port 8000 --proxy-config proxy.conf.json\"",
     "lint": "tslint \"src/**/*.ts\"",
     "test": "ng test",
     "pree2e": "webdriver-manager update",
