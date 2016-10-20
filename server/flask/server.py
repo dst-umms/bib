@@ -8,5 +8,5 @@ app = Flask(__name__)
 
 @app.route('/flask/treeRoot')
 def send_root_dirs():
-    nodes = path_to_dict('/mnt/programming/AngularJS/Angular2/material2/bib/server/flask/modules/test', 1)
+    nodes = path_to_dict('/mnt/data', 1)
     return jsonify(nodes = [nodes])
