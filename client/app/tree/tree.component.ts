@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TreeModule } from 'angular2-tree-component';
+import { TreeModule } from 'angular-tree-component';
 import { TreeService } from './tree.service';
 
 @Component({
